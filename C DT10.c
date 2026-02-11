@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    char a='A';
+    int a=(char)'A';
     printf("%d",a);
     return 0;
 }
