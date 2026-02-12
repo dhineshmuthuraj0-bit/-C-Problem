@@ -1,28 +1,14 @@
 #include <stdio.h>
 int main() {
-    int units;
-    int bill;
-    scanf("%d",&units);
-    if (units<=50)
-    {
-        bill+=units*3;
-        printf("%d\n",bill);
+    int x,y,z;
+    scanf("%d",&x);
+    if (x>=0 && x<=100) {
+        y=x*3;
+        printf("bill amount = Rs.%d",y);
     }
-    else
-    {
-        bill+=50*3;
-        units-=50;
+    else if (x>=100 && x<=200) {
+        z=x*5;
+        printf("bill amount = Rs.%d",z);
     }
-    if(units<50){
-        bill+=50*5;
-    }
-    else{
-        bill+=50*5;
-        units-=50;
-    }
-    if(units>0){
-        bill+=units*10;
-    }
-    printf("%d",bill);
     return 0;
 }
