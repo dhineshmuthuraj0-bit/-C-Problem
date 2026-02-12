@@ -3,14 +3,26 @@ int main() {
     int units;
     int bill;
     scanf("%d",&units);
-    if (units<=100)
+    if (units<=50)
     {
-        bill=units*4;
+        bill+=units*3;
+        printf("%d\n",bill);
     }
     else
     {
-        bill=(100*4)+(units-100)*10;
+        bill+=50*3;
+        units-=50;
     }
-    printf("Bill Amount = Rs:%d",bill);
+    if(units<50){
+        bill+=50*5;
+    }
+    else{
+        bill+=50*5;
+        units-=50;
+    }
+    if(units>0){
+        bill+=units*10;
+    }
+    printf("%d",bill);
     return 0;
 }
